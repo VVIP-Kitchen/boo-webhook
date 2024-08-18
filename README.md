@@ -41,3 +41,9 @@ sudo systemctl restart webhook-server
 3. Set the payload URL to `http://GCP_VM_IP:5000/webhook`
 4. Ensure the content type is set to `application/json`
 5. Select "Just the push event" for the trigger
+
+## **Monitor logs**
+To monitor logs for the systemd service
+```sh
+sudo journalctl -u webhook-server -f
+```
